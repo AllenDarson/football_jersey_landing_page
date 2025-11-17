@@ -1,22 +1,32 @@
+
+import "../assets/Css/Contact.css";
+
+
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
+// Ensure you have installed 'react-icons' and 'react-bootstrap'
 
-// Define the custom button color based on your request
+// Define the custom button color
 const buttonColor = 'rgb(13, 202, 240)'; 
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form submitted! (In a real app, you'd handle API submission here.)");
+  };
+
   return (
-    // The background image/video and overlay are complex to replicate perfectly with pure React Bootstrap.
-    // We'll focus on the content and structure within a styled section.
-    <section id="contact-section" className="py-5" style={{ backgroundColor: 'black', color: 'white' }}>
+    // 'contact-section' will be styled with the background image and overlay in styles.css
+    <section id="contact-section" className="py-5">
       <Container>
         {/* Header Section */}
         <div className="text-center text-md-start mb-5">
-          <p className="text-info mb-1">⚫ Contact us</p>
-          <h2 className="display-4 fw-bold">Get in Touch with Our Team</h2>
+          {/* text-info is styled in CSS to be the blue color */}
+          <p className="text-info mb-1">⚫ Contact us</p> 
+          <h2 className="display-4 fw-bold">Connect With KickEdge</h2>
           <p className="w-75 lead" style={{ fontSize: '0.9rem', color: '#ccc' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+           Have a question about our jerseys, sizes, or custom orders? Our team is here to help you with anything you need.
           </p>
         </div>
 
@@ -25,18 +35,18 @@ const Contact = () => {
           
           {/* 1. Contact Form (Left Side) */}
           <Col lg={6} className="mb-4 mb-lg-0">
-            <div className="p-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', borderRadius: '10px' }}>
-              <Form>
+            {/* The contact-form-box class can be added here if you want a subtle background, but the form background is handled by input styles. */}
+            <div className="p-4 contact-form-box">
+              <Form onSubmit={handleSubmit}>
                 <Row>
                   {/* First Name */}
                   <Col md={6}>
                     <Form.Group className="mb-3" controlId="formFirstName">
-                      {/* Note: The design uses placeholders without separate labels, which is common. */}
-                      {/* For accessibility, a label is good, but we hide it here to match the look */}
                       <Form.Control 
                         type="text" 
                         placeholder="First Name" 
-                        className="bg-dark text-white border-0 contact-input" 
+                        // contact-input class is crucial for the custom styling
+                        className="text-white border-0 contact-input" 
                         required 
                       />
                     </Form.Group>
@@ -48,7 +58,7 @@ const Contact = () => {
                       <Form.Control 
                         type="text" 
                         placeholder="Last Name" 
-                        className="bg-dark text-white border-0 contact-input" 
+                        className="text-white border-0 contact-input" 
                         required 
                       />
                     </Form.Group>
@@ -62,7 +72,7 @@ const Contact = () => {
                       <Form.Control 
                         type="email" 
                         placeholder="Email Address" 
-                        className="bg-dark text-white border-0 contact-input" 
+                        className="text-white border-0 contact-input" 
                         required 
                       />
                     </Form.Group>
@@ -74,7 +84,7 @@ const Contact = () => {
                       <Form.Control 
                         type="tel" 
                         placeholder="Telephone" 
-                        className="bg-dark text-white border-0 contact-input" 
+                        className="text-white border-0 contact-input" 
                       />
                     </Form.Group>
                   </Col>
@@ -86,13 +96,14 @@ const Contact = () => {
                     as="textarea" 
                     rows={4} 
                     placeholder="Comments / Questions" 
-                    className="bg-dark text-white border-0 contact-input" 
+                    className="text-white border-0 contact-input" 
                   />
                 </Form.Group>
 
                 {/* Send Message Button */}
                 <Button 
                   type="submit" 
+                  // Use the custom color for the button
                   style={{ backgroundColor: buttonColor, borderColor: buttonColor, padding: '10px 30px', borderRadius: '5px', fontWeight: 'bold' }}
                 >
                   Send Message
@@ -103,14 +114,15 @@ const Contact = () => {
 
           {/* 2. Contact Details & Social Media (Right Side) */}
           <Col lg={4}>
-            <div className="p-4 contact-info-box" style={{ backgroundColor: 'rgb(1, 46, 73)', borderRadius: '10px' }}>
+            {/* contact-info-box class is styled in CSS for the dark blue background */}
+            <div className="p-4 contact-info-box"> 
               
               {/* Phone */}
               <div className="d-flex align-items-start mb-4">
                 <FaPhone size={24} className="text-info me-3 mt-1" />
                 <div>
                   <h6 className="mb-0 fw-bold">Phone</h6>
-                  <p className="mb-0">+1 (555) 123-4567</p>
+                  <p className="mb-0 text-white-50">+91-8760961525</p>
                 </div>
               </div>
 
@@ -119,7 +131,7 @@ const Contact = () => {
                 <FaEnvelope size={24} className="text-info me-3 mt-1" />
                 <div>
                   <h6 className="mb-0 fw-bold">Email</h6>
-                  <p className="mb-0">info@yourdomain.com</p>
+                  <p className="mb-0 text-white-50">info@kickedge.com</p>
                 </div>
               </div>
 
@@ -128,7 +140,7 @@ const Contact = () => {
                 <FaMapMarkerAlt size={24} className="text-info me-3 mt-1" />
                 <div>
                   <h6 className="mb-0 fw-bold">Address</h6>
-                  <p className="mb-0">1234 Victory Lane Springfield, CA 90210 United States</p>
+                  <p className="mb-0 text-white-50">Coimbatore, Tamil Nadu, India, Asia, World</p>
                 </div>
               </div>
 

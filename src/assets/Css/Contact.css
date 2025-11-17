@@ -1,49 +1,92 @@
-/* Custom styles to match the design */
+/* --- Background Image & Overlay Styles --- */
+#contact-section {
+  /* IMPORTANT: Change this path to your image location! */
+  background-image: url('./public/contact banner.jpg'); 
+  
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  position: relative;           
+  overflow: hidden;             
+  padding-top: 5rem;            
+  padding-bottom: 5rem;         
+  color: white;                 
+}
 
-/* Style for the input fields */
+/* Dark, semi-transparent overlay */
+#contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Black with 70% opacity */
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1; 
+}
+
+/* Ensure all content appears above the overlay */
+#contact-section .container {
+  position: relative;
+  z-index: 2; 
+}
+
+/* --- Input Field Styles --- */
+.contact-form-box {
+    /* Optional: subtle background for the form container */
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+}
+
 .contact-input {
-  /* Slightly more transparent dark background for the input fields */
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  /* Transparent dark background for the input fields to blend with the overlay */
+  background-color: rgba(255, 255, 255, 0.1) !important; 
   color: white !important;
-  padding: 15px 12px; /* Increase padding to match screenshot's height */
+  padding: 15px 12px; 
   border-radius: 5px;
+  /* Remove default Bootstrap background and border */
+  border: none !important; 
 }
 
 .contact-input::placeholder {
-    color: #aaaaaa; /* Lighter placeholder text */
+    color: #aaaaaa; 
 }
 
 .contact-input:focus {
-    /* Subtle blue focus border to indicate selection */
+    /* Subtle blue focus border (rgb(13, 202, 240) is your requested color) */
     box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25) !important;
     border-color: rgb(13, 202, 240) !important;
 }
 
-/* Style for the social icons in the right box */
+/* --- Contact Info Box Styles --- */
+.contact-info-box {
+    /* Dark blue background for the right side box */
+    background-color: rgb(1, 46, 73) !important; 
+    border-radius: 10px;
+}
+
+/* --- Social Icons Styles --- */
 .social-icons a {
-  color: white; /* Default white color */
+  color: white; 
   background-color: rgba(255, 255, 255, 0.1);
   width: 35px;
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* Makes the background circular */
+  border-radius: 50%; 
   margin-right: 10px;
   transition: background-color 0.3s;
 }
 
 .social-icons a:hover {
-  background-color: rgb(13, 202, 240); /* Highlight color on hover */
+  background-color: rgb(13, 202, 240); 
   color: black;
 }
 
-/* Ensure the custom background color applies to the right box on all sizes */
-.contact-info-box {
-    background-color: rgb(1, 46, 73) !important;
-}
-
-/* Optional: To match the header's blue dot precisely */
+/* --- Header & Accent Color --- */
 .text-info {
-    color: rgb(13, 202, 240) !important;
+    /* Ensures the blue color is applied to the bullet and icons */
+    color: rgb(13, 202, 240) !important; 
 }

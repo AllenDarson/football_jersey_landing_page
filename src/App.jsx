@@ -7,6 +7,7 @@ import About from './Components/About'
 import Footer from './Components/Footer'
 import Productbanner from './Components/Productbanner'
 import Productscroll from './Components/Productscroll'
+import Contact from './Components/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
         <About />
         <Productbanner />
         <Productscroll/>
+        <Contact/>
         <Footer />
         
       </div>
