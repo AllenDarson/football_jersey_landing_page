@@ -1,0 +1,49 @@
+/* Custom styles to match the design */
+
+/* Style for the input fields */
+.contact-input {
+  /* Slightly more transparent dark background for the input fields */
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: white !important;
+  padding: 15px 12px; /* Increase padding to match screenshot's height */
+  border-radius: 5px;
+}
+
+.contact-input::placeholder {
+    color: #aaaaaa; /* Lighter placeholder text */
+}
+
+.contact-input:focus {
+    /* Subtle blue focus border to indicate selection */
+    box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25) !important;
+    border-color: rgb(13, 202, 240) !important;
+}
+
+/* Style for the social icons in the right box */
+.social-icons a {
+  color: white; /* Default white color */
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Makes the background circular */
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: rgb(13, 202, 240); /* Highlight color on hover */
+  color: black;
+}
+
+/* Ensure the custom background color applies to the right box on all sizes */
+.contact-info-box {
+    background-color: rgb(1, 46, 73) !important;
+}
+
+/* Optional: To match the header's blue dot precisely */
+.text-info {
+    color: rgb(13, 202, 240) !important;
+}
