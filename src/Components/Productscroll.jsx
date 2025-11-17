@@ -78,7 +78,7 @@ const ShopCarousel = () => {
       <header className="carousel-header">
         <h1>Products For You</h1>
         <div className="header-controls">
-          <p>Shop</p>
+          <p>Shop Products</p>
           <button onClick={handlePrev} disabled={isPrevDisabled}>{'<'}</button>
           <button onClick={handleNext} disabled={isNextDisabled}>{'>'}</button>
         </div>
