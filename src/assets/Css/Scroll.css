@@ -1,0 +1,172 @@
+/* Base Styles for the Entire Page/Container */
+.carousel-page-container {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px 40px; 
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* --- Header Section Styles --- */
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.carousel-header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+.header-controls p {
+  margin-right: 15px;
+  font-size: 0.9rem;
+}
+
+/* Arrow Buttons */
+.header-controls button {
+  background-color: #333; 
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.header-controls button:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.header-controls button:disabled {
+  background-color: #1a1a1a; 
+  cursor: not-allowed;
+  color: #666;
+}
+
+/* --- Carousel Body Styles (Desktop: 3 Products Visible) --- */
+/* The window that hides the overflow */
+.carousel-window {
+  overflow: hidden; 
+  padding-top: 40px;
+}
+
+/* The wrapper that holds ALL 10 products and slides */
+.carousel-content-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
+  /* Desktop Logic: 10 items total, 3 visible at once */
+  width: calc(10 / 3 * 100%); 
+}
+
+/* Product Card Styling */
+.product-card {
+  /* Each card takes up 1/10th of the TOTAL wrapper width (1/3 of the visible window) */
+  width: calc(100% / 10); 
+  flex-shrink: 0; 
+  padding-right: 20px; 
+  box-sizing: border-box;
+}
+
+/* Styling for the actual images */
+.product-image {
+  width: 100%; 
+  object-fit: cover; 
+  height: 400px; 
+  background-color: #f7f7f7; 
+  margin-bottom: 10px;
+}
+
+/* Product Info Styling (bottom text) */
+.product-info p {
+  margin: 5px 0;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.product-details {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* =================================================================== */
+/* 💻 Tablet View (Max-width: 1024px) - 2 Products Visible */
+/* =================================================================== */
+
+@media (max-width: 1024px) {
+    .carousel-page-container {
+        padding: 20px 25px;
+    }
+
+    /* Tablet Logic: 10 items total, 2 visible. Wrapper width is 5 times viewport (10 / 2 * 100%). */
+    .carousel-content-wrapper {
+        width: calc(10 / 2 * 100%); 
+    }
+
+    .product-card {
+        /* Each card is 1/10th of the TOTAL wrapper width (1/2 of the visible window) */
+        width: calc(100% / 10); 
+        padding-right: 20px;
+    }
+
+    .product-image {
+        /* Slightly smaller height for tablet */
+        height: 380px; 
+    }
+}
+
+
+/* =================================================================== */
+/* 📱 Mobile View (Max-width: 768px) - 1 Product Visible */
+/* =================================================================== */
+
+@media (max-width: 768px) {
+    .carousel-page-container {
+        /* Minimal padding for mobile */
+        padding: 15px 15px; 
+    }
+
+    .carousel-header h1 {
+        font-size: 1.2rem;
+    }
+
+    /* Mobile Logic: 10 items total, 1 visible. Wrapper width is 10 times viewport (10 / 1 * 100%). */
+    .carousel-content-wrapper {
+        width: calc(10 / 1 * 100%); 
+    }
+
+    .product-card {
+        /* Each card is 1/10th of the TOTAL wrapper width (100% of the visible window) */
+        width: calc(100% / 10); 
+        padding-right: 15px; 
+    }
+    
+    .product-image {
+        /* Match the style of the example image */
+        height: 400px; 
+    }
+
+    .product-name {
+        font-size: 0.95rem;
+    }
+}

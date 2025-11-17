@@ -1,202 +1,226 @@
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #000;
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
 }
 
 /* Navbar background */
 .custom-navbar {
-  background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Center logo */
 .logo-center {
-  color: #fff !important;
-  font-weight: 700;
-  text-transform: uppercase;
+    color: #fff !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Added to align items center for the flex logo on desktop and mobile */
+    display: flex; 
+    align-items: center;
 }
 
 /* Nav link base */
 .nav-link {
-  color: white !important;
-  font-weight: 500;
-  position: relative;
-  margin: 0 10px;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
+    color: white !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Hover underline */
 .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: rgb(13, 202, 240);
-  transition: width 0.3s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(13, 202, 240);
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: rgb(13, 202, 240) !important;
+    color: rgb(13, 202, 240) !important;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 /* Chevron icon color */
 .nav-link i {
-  font-size: 0.8rem;
-  transition: color 0.3s;
+    font-size: 0.8rem;
+    transition: color 0.3s;
 }
 
 .nav-link:hover i {
-  color: rgb(13, 202, 240);
+    color: rgb(13, 202, 240);
 }
 
 /* Button (Book Now) */
 .button {
-  line-height: 1;
-  text-decoration: none;
-  display: inline-flex;
-  border: none;
-  cursor: pointer;
-  align-items: center;
-  gap: 0.75rem;
-  background-color: var(--clr);
-  color: #fff;
-  border-radius: 10rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  padding-left: 20px;
-  transition: all 0.3s;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--clr);
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    padding-left: 20px;
+    transition: all 0.3s;
 }
 
 .button__icon-wrapper {
-  flex-shrink: 0;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  color: var(--clr);
-  background-color: #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 }
 
 .button:hover {
-  background-color: #000;
-  color: rgb(13, 202, 240);
-  box-shadow: 0 0 10px rgb(13, 202, 240);
+    background-color: #000;
+    color: rgb(13, 202, 240);
+    box-shadow: 0 0 10px rgb(13, 202, 240);
 }
 
 .button:hover .button__icon-wrapper {
-  color: #000;
+    color: #000;
 }
 
 .button__icon-svg--copy {
-  position: absolute;
-  transform: translate(-150%, 150%);
+    position: absolute;
+    transform: translate(-150%, 150%);
 }
 
 .button:hover .button__icon-svg:first-child {
-  transition: transform 0.3s ease-in-out;
-  transform: translate(150%, -150%);
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
 }
 
 .button:hover .button__icon-svg--copy {
-  transition: transform 0.3s ease-in-out 0.1s;
-  transform: translate(0);
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
 }
 
 /* Nav alignment */
 .left-nav, .right-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-/* Center KICKEDGE in mobile and tablet view */
 
- @media (max-width: 991px) {
-  .logo-center {
-    justify-content: center !important;
-    text-align: center;
-    width: 100%;
-  }
+/* Mobile/Tablet View Adjustments */
+@media (max-width: 991px) {
+    /* Hide the desktop logo when the viewport is small, the mobile logo is outside the collapsible div */
+    .navbar-brand.d-none.d-lg-flex {
+        display: none !important;
+    }
+    
+    /* Center the Mobile Logo using flex on the element itself */
+    .logo-center.mx-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 
-  .logo-center span {
-    margin-left: 6px !important; /* small balanced spacing */
-  }
+    /* Ensure the collapsible content (links) is full width when open */
+    .navbar-collapse {
+        margin-top: 15px; /* Add some space below the brand/toggle row */
+    }
+    
+    /* Make the mobile Book Now button full width when the menu is open */
+    .navbar-collapse .button {
+        width: 100%;
+        justify-content: center;
+    }
 }
-/* Custom toggle button inspired by Uiverse.io */
+
+/* --- MINIMIZED TOGGLE DESIGN --- */
+/* Reduced main toggle width to 30px, reduced bar height to 3px, and vertical gap (11px -> 8px) */
 #checkbox {
-  display: none;
- 
+    display: none;
+}
+
+/* Using .setting-btn for custom toggle styling */
+.navbar-toggler.setting-btn {
+    padding: 0;
+    width: 30px; /* Reduced width */
+    height: calc(3px * 3 + 8px * 2); /* Reduced height calculation */
 }
 
 .toggle {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition-duration: .5s;
+    position: relative;
+    width: 30px; /* Reduced width */
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: calc(3px * 3 + 8px * 2); /* Reduced height calculation */
 }
 
-.bars {
-  width: 100%;
-  height: 4px;
-  background-color:  rgb(13, 202, 240);
-  border-radius: 4px;
+.bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px; /* Reduced bar thickness */
+    border-radius: calc(3px / 2);
+    background: rgb(13, 202, 240); 
+    color: inherit;
+    opacity: 1;
+    transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
 }
 
-#bar2 {
-  transition-duration: .8s;
+/***** Tornado Animation *****/
+
+.bar--top {
+    bottom: calc(50% + 8px + 3px/ 2); /* Adjusted vertical gap (11px -> 8px), bar height (4px -> 3px) */
+    transition-property: bottom,transform;
+    transition-delay: calc(0s + 0.35s) * .6;
 }
 
-#bar1,#bar3 {
-  width: 70%;
+.bar--middle {
+    top: calc(50% - 3px/ 2); /* Adjusted bar height */
+    transition-property: opacity,transform;
+    transition-delay: calc(0s + 0.35s * .3);
 }
 
-#checkbox:checked + .toggle .bars {
-  position: absolute;
-  transition-duration: .5s;
+.bar--bottom {
+    top: calc(50% + 8px + 3px/ 2); /* Adjusted vertical gap and bar height */
+    transition-property: top,transform;
+    transition-delay: 0s;
 }
 
-#checkbox:checked + .toggle #bar2 {
-  transform: scaleX(0);
-  transition-duration: .5s;
+#checkbox:checked + .toggle .bar--top {
+    transform: rotate(-135deg);
+    transition-delay: 0s;
+    bottom: calc(50% - 3px/ 2); /* Adjusted bar height */
 }
 
-#checkbox:checked + .toggle #bar1 {
-  width: 100%;
-  transform: rotate(45deg);
-  transition-duration: .5s;
+#checkbox:checked + .toggle .bar--middle {
+    opacity: 0;
+    transform: rotate(-135deg);
+    transition-delay: calc(0s + 0.35s * .3);
 }
 
-#checkbox:checked + .toggle #bar3 {
-  width: 100%;
-  transform: rotate(-45deg);
-  transition-duration: .5s;
+#checkbox:checked + .toggle .bar--bottom {
+    top: calc(50% - 3px/ 2); /* Adjusted bar height */
+    transform: rotate(-225deg);
+    transition-delay: calc(0s + 0.35s * .6);
 }
-
-#checkbox:checked + .toggle {
-  transition-duration: .5s;
-  transform: rotate(180deg);
-}
-
-
-
-
+/*************************/
 /*************************/
 .hero-section {
   background-color: black;
@@ -209,16 +233,20 @@ body {
   opacity: 0.8;
 }
 
-/* Center vertically but align to start horizontally */
 .hero-caption {
   position: absolute;
-  top: 60%;
-  left: 18%;
-  transform: translateY(-50%);
-  text-align: left;
+  top: 55%;        
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 70%;
   color: #fff;
-  width: 45%;
 }
+.carousel-item {
+  position: relative !important;
+}
+
+
 
 .hero-caption h1 {
   font-size: 3.2rem;
@@ -331,6 +359,71 @@ body {
   opacity: 1;
 }
 
+/* --- New CSS for Responsive Design --- */
 
+/* Adjustments for Tablets (Screen size up to 991.98px) */
+@media (max-width: 991.98px) {
+    .hero-caption h1 {
+        font-size: 2.5rem; /* Slightly smaller heading */
+    }
 
+    .hero-caption p {
+        font-size: 1.2rem; /* Slightly smaller paragraph */
+    }
 
+    /* Adjust button padding for smaller screens */
+    .animated-button {
+        padding: 12px 30px; 
+        font-size: 14px;
+        box-shadow: 0 0 0 1px #ffffff; /* Thinner border shadow */
+    }
+    
+    .animated-button svg {
+        width: 20px; /* Smaller icons */
+    }
+}
+
+/* Adjustments for Mobile Phones (Screen size up to 575.98px) */
+@media (max-width: 575.98px) {
+    .hero-caption {
+        width: 90%; /* Increase caption width to fit smaller screen */
+        top: 60%; /* Slightly lower position to look better on mobile */
+    }
+
+    .hero-caption h1 {
+        font-size: 1.8rem; /* Significantly smaller heading for mobile */
+    }
+
+    .hero-caption p {
+        font-size: 1rem; /* Smaller paragraph for mobile */
+    }
+
+    /* Further adjust button padding for mobile */
+    .animated-button {
+        padding: 10px 20px; 
+        font-size: 12px;
+    }
+    
+    .animated-button .text {
+        transform: translateX(-8px); /* Adjust initial text position */
+    }
+    
+    .animated-button:hover .text {
+        transform: translateX(8px); /* Adjust hover text position */
+    }
+    
+    .animated-button .arr-1,
+    .animated-button .arr-2 {
+        width: 18px; /* Slightly smaller icons for mobile */
+    }
+    
+    .animated-button:hover .circle {
+        width: 150px; /* Adjust circle size on hover for mobile */
+        height: 150px;
+    }
+    
+    .hero-img {
+        height: 600px; /* Shorter carousel height for mobile */
+    }
+}
+/***************************************************************************************************/

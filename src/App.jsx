@@ -3,6 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Base from './Components/Base'
+import About from './Components/About'
+import Footer from './Components/Footer'
+import Productbanner from './Components/Productbanner'
+import Productscroll from './Components/Productscroll'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +15,11 @@ function App() {
     <>
       <div>
         <Base />
+        <About />
+        <Productbanner />
+        <Productscroll/>
+        <Footer />
+        
       </div>
       
     </>

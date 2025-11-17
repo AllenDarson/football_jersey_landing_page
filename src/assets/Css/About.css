@@ -1,0 +1,315 @@
+/* Custom Variables */
+:root {
+    /* New variable for the outermost section background (Pure Black as requested) */
+    --section-bg: #000000; 
+    /* Slightly lighter black/navy for the inner card/row for contrast */
+    --main-bg-dark: #090f1d; 
+    --card-bg-dark: #000000; /* Pure Black for inner elements */
+    --cyan-accent: rgb(13, 202, 240); /* Requested color: #0dcef0 */
+    --secondary-text: #adb5bd; /* Light gray for secondary text */
+}
+
+/* General Section Styling - Changed to use --section-bg */
+.about-section {
+    background-color: var(--section-bg); 
+    color: white;
+    padding-bottom: 5rem !important; 
+    padding-top: 5rem !important; 
+}
+
+/* Custom Utility Class for Text Color */
+.text-cyan {
+    color: var(--cyan-accent) !important;
+}
+
+/* Row/Container Setup */
+.about-row {
+    max-width: 1200px; 
+    margin: 0 auto;
+    border-radius: 1.5rem; /* Slightly larger radius */
+    overflow: hidden; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    /* Ensure row uses the slightly lighter dark background for a subtle lift */
+    background-color: var(--main-bg-dark); 
+}
+
+/* Image Column Styling */
+.image-col {
+    position: relative;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;
+    height: 100%;
+    min-height: 450px; 
+}
+
+.image-container img {
+    height: 100%;
+    object-fit: cover;
+    /* Rounded corners on the left side, matching the row's radius */
+    border-radius: 1.5rem 0 0 1.5rem; 
+}
+
+/* 'Since 2010' Overlay Text Styling - Uses Cyan Accent */
+.since-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-90deg); 
+    transform-origin: 0 0;
+    color: var(--cyan-accent); 
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 10; 
+    padding-left: 20px; 
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow for visibility */
+}
+
+.since-text .small {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.since-text .big-year {
+    font-size: 2.8rem; /* Slightly larger */
+}
+
+/* Content Column Styling */
+.content-col {
+    background-color: var(--main-bg-dark); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.small-icon-text {
+    font-size: 0.9rem;
+}
+
+.main-title {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: 900;
+    line-height: 1.2;
+    color: white;
+}
+
+.main-title strong {
+    color: var(--cyan-accent); /* Cyan emphasis */
+}
+
+/* CTA Button (Requested RGB color) */
+.neo-space-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5rem;
+  position: relative;
+  transition: 0.5s;
+  border: double 4px transparent;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+
+  /* Cyan themed gradient border */
+  background-image: 
+    linear-gradient(#000, #000),
+    linear-gradient(
+      137deg,
+      rgb(13, 202, 240),
+      rgba(13, 202, 240, 0.6),
+      rgba(13, 202, 240, 0.35)
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  animation: gradient_301 6s ease infinite;
+}
+
+.neo-space-btn strong {
+  z-index: 2;
+  letter-spacing: 4px;
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 0 6px white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Stars wrapper */
+.neo-stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.neo-stars {
+  position: relative;
+  width: 200rem;
+  height: 200rem;
+  background: transparent;
+}
+
+.neo-stars::after,
+.neo-stars::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#fff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+.neo-stars::after {
+  top: -10rem;
+  left: -100rem;
+  animation: animStarRotate 90s linear infinite;
+}
+
+.neo-stars::before {
+  top: 0;
+  left: -50%;
+  opacity: 0.5;
+  animation: animStar 60s linear infinite;
+}
+
+/* Glow area */
+.neo-glow {
+  position: absolute;
+  width: 12rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.neo-circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  border-radius: 50%;
+}
+
+/* Cyan glow */
+.neo-circle:nth-child(1),
+.neo-circle:nth-child(2) {
+  background: rgba(13, 202, 240, 0.55);
+}
+
+/* Hover effects */
+.neo-space-btn:hover {
+  transform: scale(1.1);
+}
+
+.neo-space-btn:active {
+  border: double 4px rgb(13, 202, 240);
+  animation: none;
+}
+
+.neo-space-btn:active .neo-circle {
+  background: rgb(13, 202, 240);
+}
+
+/* Star animations */
+@keyframes animStar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-135rem); }
+}
+
+@keyframes animStarRotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
+
+/* Gradient animation */
+@keyframes gradient_301 {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow pulse */
+@keyframes pulse_3011 {
+  0%   { transform: scale(0.75); box-shadow: 0 0 0 0 rgba(0,0,0,0.7); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+  100% { transform: scale(0.75); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+
+
+/* Head Coach Info */
+.head-coach-info {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.head-coach-info i {
+    font-size: 2rem;
+    color: var(--cyan-accent); /* Cyan icon */
+}
+
+/* Vision/Mission Cards - Set to pure black */
+.vision-mission-card {
+    background-color: var(--card-bg-dark); 
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle white border */
+    border-radius: 0.75rem;
+    color: white;
+    height: 100%; 
+    transition: transform 0.2s;
+}
+
+.vision-mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(13, 202, 240, 0.1);
+}
+
+.vision-mission-card .card-icon {
+    font-size: 2.5rem;
+}
+
+/* -------------------------------------------------------------------
+    Mobile Responsiveness (Bootstrap handles most, but we adjust visuals)
+    ------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+    /* Tablet and below */
+    .content-col {
+        padding: 3rem 1.5rem !important; 
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Mobile adjustments */
+    .image-container {
+        min-height: 300px;
+    }
+    .image-container img {
+        border-radius: 1.5rem 1.5rem 0 0; /* Rounded corners on top only for mobile */
+    }
+    .since-text {
+        top: 20px;
+        left: 20px;
+        transform: rotate(0deg); /* Revert rotation for mobile layout */
+        transform-origin: initial;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 0.5rem;
+    }
+    .about-row {
+        border-radius: 1.5rem;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+}
+
+

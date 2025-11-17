@@ -1,0 +1,245 @@
+/* ---------- Updated Kickstar-style Footer (using your brand and color) ---------- */
+.lux-footer {
+  position: relative;
+  padding: 80px 0 30px;
+  background: #101418; /* Dark background similar to the image - change to #000 if strict black is needed */
+  color: #fff;
+  overflow: hidden;
+}
+
+/* No glow overlay needed for this specific dark style */
+.footer-overlay {
+  display: none;
+}
+
+/* Layout - Three main columns */
+.footer-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1; /* Distribute space evenly initially */
+  min-width: 250px;
+}
+
+/* Brand/Info Section */
+.footer-brand-section {
+  flex: 1.5; /* Give the brand/text section more room */
+}
+
+/* Logo Styling (As requested) */
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+  /* Use a slight hover effect if desired */
+}
+
+.footer-logo-img {
+  width: 45px;
+  height: 45px;
+ 
+}
+
+.footer-logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff; /* White text for the brand name */
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+/* Footer Text */
+.footer-text {
+  color: #a0a0a0;
+  margin-top: 15px;
+  line-height: 1.6;
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+/* Section Titles */
+.footer-title {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #fff; /* White title as in the image */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Links List (Quick Links) */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, padding-left 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links a i {
+  margin-right: 10px;
+  font-size: 1.1rem;
+  color: rgb(13, 202, 240); /* Cyan arrow color */
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  color: rgb(13, 202, 240);
+  padding-left: 5px;
+}
+
+/* Contact Information List */
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact-list li {
+  color: #a0a0a0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  /* Ensure email/website links inherit the hover behavior if they are anchor tags */
+}
+
+.footer-contact-list li i {
+  color: rgb(13, 202, 240); /* Cyan icon color */
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Social Icons (Image Style) */
+.footer-social-image-style {
+  margin-top: 25px;
+  display: flex;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Background colors similar to the image's buttons */
+.facebook-bg { background-color: #3b5998; }
+.twitter-bg { background-color: #00acee; }
+.pinterest-bg { background-color: #E60023; } /* Used Pinterest for the P icon */
+.telegram-bg { background-color: #0088cc; } /* Used Telegram for the airplane icon */
+
+
+.social-icon:hover {
+  /* Using the requested hover color */
+  background-color: rgb(13, 202, 240);
+  color: #101418;
+}
+
+/* Bottom Line */
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .footer-section {
+    min-width: 45%;
+  }
+  .footer-brand-section {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-text {
+    max-width: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer-section {
+    min-width: 100%;
+  }
+  .footer-brand-section {
+    text-align: center;
+  }
+  .footer-logo-link {
+    justify-content: center;
+  }
+  .footer-social-image-style {
+    justify-content: center;
+  }
+}
+/* ... (existing styles) ... */
+
+/* Links List (Quick Links) */
+/* ... (existing styles) ... */
+
+.footer-links a {
+  /* ... (existing styles) ... */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Updated styling for the GoArrowUpRight icon */
+.footer-links a .link-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+  color: rgb(13, 202, 240); /* Cyan arrow color */
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  color: rgb(13, 202, 240);
+  padding-left: 5px;
+}
+
+/* Contact Information List */
+/* ... (existing styles) ... */
+
+/* Updated styling for the contact icons */
+.footer-contact-list li .contact-icon {
+  color: rgb(13, 202, 240); /* Cyan icon color */
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Social Icons (Image Style) */
+/* ... (The rest of the CSS remains the same as the icons are directly inside the anchor tags) ... */
