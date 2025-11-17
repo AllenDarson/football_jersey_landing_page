@@ -8,6 +8,7 @@ import Footer from './Components/Footer'
 import Productbanner from './Components/Productbanner'
 import Productscroll from './Components/Productscroll'
 import Contact from './Components/Contact'
+import Faq from './Components/Faq'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Productbanner />
         <Productscroll/>
+        <Faq/>
         <Contact/>
         <Footer />
         
