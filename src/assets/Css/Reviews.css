@@ -1,0 +1,17 @@
+/* JerseyReviews.css */
+
+.jersey-reviews-section {
+    /* Enforce black background and white text for the whole section */
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Ensure progress bars look dark/black in the empty space */
+.progress {
+    background-color: #333333 !important;
+}
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+}

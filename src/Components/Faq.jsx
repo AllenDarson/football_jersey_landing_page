@@ -15,7 +15,7 @@ function Faq() {
         <Row className="justify-content-center text-center mb-5">
           <Col lg={8} xl={7}>
             {/* The 'text-muted' class can be styled to a specific color if needed, but we keep it default Bootstrap for simplicity */}
-            <span className="text-light">F.A.Q</span>
+            
             <h2 className="display-5 fw-bold">Frequently Asked Questions</h2>
             <p className="lead" style={{ color: '#ccc' }}>
               Our FAQ section is designed to guide you with smooth, simple answers for a better KickEdge shopping experience.

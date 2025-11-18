@@ -1,0 +1,159 @@
+/* --- SECTION STYLES --- */
+.kickedge-features-section {
+  background-color:#101418; /* Black Background */
+  color: #fff; /* White Text */
+  position: relative;
+  overflow: hidden; /* To contain the absolute elements */
+  padding: 50px 0;
+}
+
+/* Ensure the heading is visible and styled for the black background */
+.kickedge-features-section h2 {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+/* --- CENTER IMAGE/CIRCLE STYLES (Desktop Default) --- */
+.center-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centered both ways */
+  width: 250px; /* Adjust size as needed */
+  height: 250px;
+  z-index: 1; /* Below the feature blocks */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  
+  /* Placeholder image effect for the center */
+  background-color: #333; /* Fallback color */
+  background-image: url('public/chooseus.jpg'); /* Replace with your actual background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8; /* Slight opacity */
+}
+
+/* The inner circle outline/text area */
+.center-icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border: 2px solid white; /* Outline for the inner circle */
+    border-radius: 50%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    font-size: 1.2rem;
+}
+
+
+/* --- FEATURE BLOCK STYLES (4 Corners) --- */
+
+.feature-col {
+    z-index: 2; /* Ensure features are above the center image */
+}
+
+.feature-block {
+  padding: 40px 20px;
+  height: 100%; 
+}
+
+/* Icon Circle Styling (The colored circles) */
+.icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Position the icon circle based on alignment */
+.icon-circle.align-left {
+    float: left;
+    margin-right: 15px;
+}
+.icon-circle.align-right {
+    float: right;
+    margin-left: 15px;
+}
+
+/* Content Box Styles */
+.content-box {
+  overflow: hidden; /* Clear the float after the icon circle */
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.feature-text {
+  color: #aaa; /* Lighter grey text */
+  font-size: 0.9rem;
+}
+
+
+/* --- TABLET/DESKTOP ADJUSTMENTS (min-width: 768px) --- */
+@media (min-width: 768px) {
+    /* For the two right features (index 1 and 3) */
+    .feature-col:nth-child(even) .feature-block {
+        padding-left: 50%; /* Pushes the block content more towards the edge */
+    }
+
+    /* For the two left features (index 0 and 2) */
+    .feature-col:nth-child(odd) .feature-block {
+        padding-right: 50%; /* Pushes the block content more towards the edge */
+    }
+}
+
+
+/* --- MOBILE RESPONSIVENESS ADJUSTMENTS (max-width: 767px) --- */
+@media (max-width: 767px) {
+  
+  /* FIX 1: Adjust Section Padding to create space for center element */
+  .kickedge-features-section {
+    /* Significantly increase padding to push top/bottom content away from the absolute center */
+    padding-top: 250px; 
+    padding-bottom: 50px; 
+  }
+  
+  /* FIX 2: Reposition/Resize the Central Image */
+  .center-image-container {
+    /* Move it to the top area of the content */
+    top: 100px; 
+    transform: translateX(-50%); 
+    
+    width: 150px; 
+    height: 150px;
+  }
+  
+  /* FIX 3: Center the Text and Icons on Mobile */
+  .feature-block, 
+  .content-box.text-left, 
+  .content-box.text-right,
+  .feature-block .text-left,
+  .feature-block .text-right {
+    text-align: center !important;
+  }
+
+  /* Center the icon circle by removing float and using margin auto */
+  .icon-circle.align-left,
+  .icon-circle.align-right {
+    float: none;
+    margin: 0 auto 15px auto;
+  }
+  
+  /* FIX 4: Remove padding from desktop grid adjustments */
+  .feature-col:nth-child(even) .feature-block,
+  .feature-col:nth-child(odd) .feature-block {
+      padding-left: 20px; 
+      padding-right: 20px; 
+  }
+}
