@@ -6,21 +6,21 @@ import { FaStar } from 'react-icons/fa'; // You'll need to install react-icons: 
 const mockReviews = [
   {
     id: 1,
-    name: "Emily Salmon",
+    name: "Monica",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?img=1", // Placeholder image
     text: "The jersey quality is exceptional and the delivery was fast. My new go-to site for football shirts! Easy to navigate and fantastic customer support."
   },
   {
     id: 2,
-    name: "Hector Gibbons",
+    name: "Aravind",
     rating: 4,
     avatar: "https://i.pravatar.cc/150?img=7", // Placeholder image
     text: "Really nicely designed website and quite fast loading. The jersey fits perfectly—true to size. I'm already looking to purchase another one."
   },
   {
     id: 3,
-    name: "Mark Edwards",
+    name: "Shiny",
     rating: 3,
     avatar: "https://i.pravatar.cc/150?img=5", // Placeholder image
     text: "The kit arrived exactly as ordered. The printing quality is excellent. Just wish the shipping options were a bit cheaper, but the product is great."

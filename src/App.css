@@ -2,6 +2,28 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #000;
 }
+/*scroll bar css*/
+/* 1. Target the entire scroll bar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the entire scroll bar */
+}
+
+/* 2. Target the track (the background area) */
+::-webkit-scrollbar-track {
+    background: #222222; /* Dark background color (dark gray/black) */
+    border-radius: 10px; /* Optional: Makes the ends rounded */
+}
+
+/* 3. Target the thumb (the moving part you drag) */
+::-webkit-scrollbar-thumb {
+    background: rgb(13, 202, 240); /* A contrasting color, like a 'jersey green' */
+    border-radius: 10px; /* Makes the thumb rounded */
+}
+
+/* 4. Optional: Style when the user hovers over the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background:  rgb(13, 202, 240); /* A slightly lighter green when hovered */
+}
 
 /* Navbar background */
 .custom-navbar {
