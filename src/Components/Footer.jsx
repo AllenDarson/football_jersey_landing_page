@@ -43,8 +43,8 @@ const Footer = () => {
           <ul className="footer-links">
             <li><a href="#hero"><GoArrowUpRight className="link-icon" /> Home</a></li>
             <li><a href="#about"><GoArrowUpRight className="link-icon" /> About Us</a></li>
-            <li><a href="#schedules"><GoArrowUpRight className="link-icon" /> Schedules</a></li>
-            <li><a href="#blog"><GoArrowUpRight className="link-icon" /> Blog & News</a></li>
+            <li><a href="#schedules"><GoArrowUpRight className="link-icon" /> Our Products</a></li>
+            <li><a href="#blog"><GoArrowUpRight className="link-icon" /> News</a></li>
             <li><a href="#contact"><GoArrowUpRight className="link-icon" /> Contact Us</a></li>
           </ul>
         </div>

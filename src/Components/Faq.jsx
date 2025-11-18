@@ -9,7 +9,7 @@ const buttonColor = 'rgb(13, 202, 240)';
 function Faq() {
   return (
     // Set background color to black and text color to white
-    <section className="py-5" style={{ backgroundColor: 'black', color: 'white' }}>
+    <section className="py-5" style={{ backgroundColor: '#101418', color: 'white' }}>
       <Container>
         {/* Row 1: Main Header */}
         <Row className="justify-content-center text-center mb-5">

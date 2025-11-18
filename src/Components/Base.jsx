@@ -62,12 +62,12 @@ function Base() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#About" style={{ fontSize: "20px" }}>
-                  About <i className="bi bi-chevron-down ms-1"></i>
+                  About Us <i className="bi bi-chevron-down ms-1"></i>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#" style={{ fontSize: "20px" }}>
-                  Products <i className="bi bi-chevron-down ms-1"></i>
+                  Our Products <i className="bi bi-chevron-down ms-1"></i>
                 </a>
               </li>
             </ul>
@@ -120,7 +120,7 @@ function Base() {
 
               <li className="nav-item">
                 <a className="nav-link" href="#" style={{ fontSize: "20px" }}>
-                  Pages <i className="bi bi-chevron-down ms-1"></i>
+                  News <i className="bi bi-chevron-down ms-1"></i>
                 </a>
               </li>
               <li className="nav-item">
