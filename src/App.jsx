@@ -11,7 +11,7 @@ import Contact from './Components/Contact'
 import Faq from './Components/Faq'
 import Choose from './Components/Choose'
 import Reviews from './Components/Reviews'
-
+import News from './Components/News'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -25,6 +25,7 @@ function App() {
         <Choose/>
         <Reviews/>
         <Faq/>
+        <News/>
         <Contact/>
         <Footer />
         
