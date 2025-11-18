@@ -14,7 +14,7 @@ const buttonColor = 'rgb(13, 202, 240)';
 const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Form submitted! (In a real app, you'd handle API submission here.)");
+        alert("Thanks for reaching out to KickEdge! We’ll respond as soon as possible.");
     };
 
     return (
@@ -24,7 +24,7 @@ const Contact = () => {
                 {/* Header Section */}
                 <div className="text-center text-md-start mb-5">
                     {/* text-info is styled in CSS to be the blue color */}
-                    <p className="text-info mb-1"><IoIosFootball /> Contact us</p>
+                    <p className="text-info mb-1"> Contact us</p>
                     <h2 className="display-4 fw-bold">Connect With KickEdge</h2>
                     <p className="w-75 lead" style={{ fontSize: '0.9rem', color: '#ccc' }}>
                         Have a question about our jerseys, sizes, or custom orders? Our team is here to help you with anything you need.

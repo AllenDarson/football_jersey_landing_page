@@ -4,6 +4,8 @@ import "../assets/Css/News.css";
 
 // Assuming this component is rendered inside a parent with a black background
 const KickEdgeLatestNews = () => {
+    
+
    
     const newsArticles = [
         {
