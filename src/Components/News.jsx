@@ -16,13 +16,13 @@ const KickEdgeLatestNews = () => {
             title: 'KickEdge Opens First Exclusive Store in Coimbatore',
             date: 'Nov 6, 2025',
             summary: 'We are excited to welcome fans to our newest boutique in Coimbatore, Tamil Nadu. Drop by to discover special merchandise and fresh arrivals from the KickEdge lineup.',
-            imageSrc: 'placeholder-store.jpg' // Placeholder for your store image
+            imageSrc: 'public/news 2.jpg' // Placeholder for your store image
         },
         {
             title: 'KickEdge Unveils Eco-Friendly Liga Retro Jersey Upgrade',
             date: 'Nov 4, 2025',
             summary: 'Our classic Liga collection gets a sustainable makeover with recycled polyester and bold new 38mm fabric details. A timeless design reimagined with modern materials.',
-            imageSrc: 'placeholder-fabric.jpg' // Placeholder for your close-up jersey texture
+            imageSrc: 'public/News 3.png' // Placeholder for your close-up jersey texture
         }
     ];
 
@@ -61,7 +61,7 @@ const KickEdgeLatestNews = () => {
 
                                 <div className="card-body p-0">
                                     {/* Title */}
-                                    <h5 className="card-title fw-bold text-uppercase" style={{ fontSize: '1.1rem' }}>
+                                    <h5 className="card-title fw-bold text-uppercase  text-light" style={{ fontSize: '1.1rem' }}>
                                         {article.title}
                                     </h5>
                                     {/* Date */}
