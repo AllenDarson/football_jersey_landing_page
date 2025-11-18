@@ -1,12 +1,16 @@
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure you import Bootstrap CSS
 import "../assets/Css/News.css";
 
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // Assuming this component is rendered inside a parent with a black background
 const KickEdgeLatestNews = () => {
+     useEffect(() => {
+            AOS.init({ duration: 1200 });
+          }, []);
     
-
-   
     const newsArticles = [
         {
             title: 'MESSI’S LEGACY: THE INTER MIAMI HOME JERSEY',
@@ -31,7 +35,7 @@ const KickEdgeLatestNews = () => {
     return (
         // **Set the background and text color for the entire section**
         <section className="py-5 bg-black text-white">
-            <div className="container">
+            <div className="container"data-aos="zoom-in-up">
                 {/* Title Section */}
                 <div className="text-center mb-5">
                     <h2 className="display-6 fw-bold">Latest KickEdge News</h2>

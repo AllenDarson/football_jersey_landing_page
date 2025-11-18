@@ -1,9 +1,14 @@
-import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaShoppingBag } from 'react-icons/fa';
 import "../assets/Css/Banner.css";
 
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const RunningBanner = () => {
+   useEffect(() => {
+      AOS.init({ duration: 1200 });
+    }, []);
   return (
     // The main div uses the custom class 'running-banner' for the image and height
     <div className="running-banner">
@@ -11,7 +16,7 @@ const RunningBanner = () => {
         <Row className="h-100 align-items-center">
           {/* Centered text and button content */}
           {/* The column is right-aligned on medium screens and up (text-md-end) */}
-          <Col md={{ span: 8, offset: 4 }} className="text-md-end text-center">
+          <Col md={{ span: 8, offset: 4 }} className="text-md-end text-center"data-aos="fade-right">
             
             {/* Main Headline */}
             <h1 className="display-4 fw-bolder text-white text-uppercase banner-headline">

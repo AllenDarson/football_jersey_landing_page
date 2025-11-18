@@ -1,10 +1,17 @@
-import React from 'react';
 import { Container, Row, Col, Button, Card, Image } from 'react-bootstrap';
 import "../assets/Css/About.css";
 import { IoIosFootball } from "react-icons/io";
 
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const AboutSection = () => {
+      useEffect(() => {
+        AOS.init({ duration: 1200 });
+      }, []);
     return (
         // The background color is set via CSS class 'about-section'
         <section className="about-section py-5"id="About">
@@ -12,7 +19,7 @@ const AboutSection = () => {
                 <Row className="about-row g-0">
 
                     {/* Left Side: Image and 'Since 2010' Text */}
-                    <Col md={6} className="image-col">
+                    <Col md={6} className="image-col"data-aos="fade-right">
                         <div className="image-container">
                             {/* Use the placeholder variable for the image source */}
                             <Image src="public\about.jpg" alt="Football coach training players" fluid className="rounded-4" />
@@ -26,7 +33,7 @@ const AboutSection = () => {
 
                     {/* Right Side: Text Content, CTA, and Cards */}
                     <Col md={6} className="content-col p-5">
-                        <div className="about-header mb-4">
+                        <div className="about-header mb-4"data-aos="fade-down">
                             {/* Text color is bright cyan */}
                             <span className="small-icon-text text-cyan">
                                 <i className="bi bi-info-circle"></i><IoIosFootball /> About Us
