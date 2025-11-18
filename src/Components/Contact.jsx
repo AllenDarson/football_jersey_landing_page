@@ -5,6 +5,7 @@ import "../assets/Css/Contact.css";
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
+import { IoIosFootball } from "react-icons/io";
 // Ensure you have installed 'react-icons' and 'react-bootstrap'
 
 // Define the custom button color
@@ -23,7 +24,7 @@ const Contact = () => {
                 {/* Header Section */}
                 <div className="text-center text-md-start mb-5">
                     {/* text-info is styled in CSS to be the blue color */}
-                    <p className="text-info mb-1">⚫ Contact us</p>
+                    <p className="text-info mb-1"><IoIosFootball /> Contact us</p>
                     <h2 className="display-4 fw-bold">Connect With KickEdge</h2>
                     <p className="w-75 lead" style={{ fontSize: '0.9rem', color: '#ccc' }}>
                         Have a question about our jerseys, sizes, or custom orders? Our team is here to help you with anything you need.
@@ -103,19 +104,21 @@ const Contact = () => {
                                 {/* Send Message Button */}
                                 <div className="d-grid">
                                     {/* The d-grid class makes the button full width (like w-100) */}
-                                    <button
+                                  
+
+                                    <Button
                                         type="submit"
-                                        className="button"
-                                        // Use the JavaScript style object to set the CSS Variable '--clr'
+                                        // Use the custom class name and the CSS variable
+                                        className="contact-submit-btn"
                                         style={{ "--clr": "rgb(13, 202, 240)" }}
                                     >
-                                        <span className="button__icon-wrapper">
-                                            {/* Original Icon */}
+                                        <span className="contact-submit-btn__icon-wrapper">
+                                            {/* Main SVG Icon */}
                                             <svg
                                                 viewBox="0 0 14 15"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="button__icon-svg"
+                                                className="contact-submit-btn__icon-svg"
                                                 width="10"
                                             >
                                                 <path
@@ -123,13 +126,14 @@ const Contact = () => {
                                                     fill="currentColor"
                                                 ></path>
                                             </svg>
-                                            {/* Copy Icon (for animation) */}
+
+                                            {/* Copy SVG Icon for the transition */}
                                             <svg
                                                 viewBox="0 0 14 15"
                                                 fill="none"
                                                 width="10"
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                className="button__icon-svg button__icon-svg--copy"
+                                                className="contact-submit-btn__icon-svg contact-submit-btn__icon-svg--copy"
                                             >
                                                 <path
                                                     d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
@@ -137,9 +141,8 @@ const Contact = () => {
                                                 ></path>
                                             </svg>
                                         </span>
-                                        {/* Updated Text */}
                                         Send Message
-                                    </button>
+                                    </Button>
                                 </div>
                             </Form>
                         </div>
