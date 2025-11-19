@@ -155,3 +155,48 @@
     transition: transform 0.3s ease-in-out 0.1s;
     transform: translate(0);
 }
+
+/* ========================================================= */
+/* --- MOBILE & TABLET OPTIMIZATIONS (Max Width 992px) --- */
+/* ========================================================= */
+
+@media (max-width: 992px) {
+    /* Adjust padding for overall section on small screens */
+    #contact-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Reduce the size of the main header on mobile for better fit */
+    #contact-section .display-4 {
+        font-size: 2.25rem !important; /* Smaller than the default display-4 on mobile */
+    }
+
+    /* Center the header text since the form/info boxes stack */
+    #contact-section .text-center {
+        text-align: center !important;
+    }
+
+    /* Ensure the intro paragraph is full width when stacked */
+    #contact-section .w-75 {
+        width: 100% !important;
+        /* Center text for a cleaner look */
+        text-align: center; 
+    }
+    
+    /* Add vertical spacing between the form (Col lg=6) and info box (Col lg=4) when they stack */
+    .contact-info-box {
+        margin-top: 1.5rem;
+    }
+    
+    /* In the contact details box, center alignment works better on small screens */
+    .contact-info-box h6,
+    .contact-info-box p {
+        text-align: left; /* Keep text left aligned within its column */
+    }
+
+    /* Center social icons on mobile */
+    .social-icons {
+        justify-content: center;
+    }
+}
