@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Footer.css";
+import "../assets/Css/Footer.css";
 // Import necessary React Icons
 import { FaFacebookF, FaTwitter, FaPinterestP, FaTelegramPlane } from 'react-icons/fa';
 import { GoArrowUpRight } from 'react-icons/go';
