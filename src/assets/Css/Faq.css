@@ -93,3 +93,62 @@
     /* Brings copy icon into view */
     transform: translate(0); 
 }
+
+/* General adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    /* Adjust display size for main header on mobile */
+    .display-5 {
+        font-size: 2.5rem !important; /* Smaller than the desktop size */
+    }
+
+    /* Reduce padding on the section for a tighter mobile fit */
+    section.py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Center the CTA content on mobile when it stacks */
+    .col-md-5 h2,
+    .col-md-5 p {
+        text-align: center;
+    }
+
+    /* *** START OF CRITICAL FIX *** */
+    /* Add a class to the column to center its text content on mobile */
+    .col-md-5 {
+        text-align: center; /* This centers the inline/inline-block elements inside */
+    }
+
+    /* Ensure the button is an inline-block element so the 'text-align: center' works */
+    .col-md-5 .button {
+        /* No need for display: block, margin: auto, or width: fit-content if 
+           we use text-align: center on the parent, but keeping it simple: */
+        display: inline-flex; /* Use inline-flex to respect text-align: center on parent */
+    }
+    /* *** END OF CRITICAL FIX *** */
+}
+
+/* Optional: Minor adjustment for tablet view (between 768px and 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* **Tablet Fix**: Apply the same centering logic for the tablet view (Col MD is 5) */
+    .row.justify-content-center > .col-md-5 {
+        padding-right: 2rem; 
+        /* Add text-align: center here too, if you want it centered on tablets */
+        text-align: center; 
+    }
+    
+    /* Ensure the button is an inline-flex element in the tablet view too */
+    .col-md-5 .button {
+        display: inline-flex;
+        /* Optionally add margin-bottom if you want more space before the accordion starts */
+        /* margin-bottom: 2rem; */
+    }
+}
+
+/* Ensure Accordion button text remains readable */
+.accordion-header .accordion-button {
+    font-size: 1rem; /* Adjust if needed, but 1rem is usually fine */
+}
+
+/* Keep your existing custom CSS below this line */
+/* ... your existing .text-info, .accordion-item, .button, etc. styles ... */
