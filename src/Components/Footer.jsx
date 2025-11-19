@@ -41,11 +41,11 @@ const Footer = () => {
         <div className="footer-section footer-quick-links">
           <h4 className="footer-title">Quick Links</h4>
           <ul className="footer-links">
-            <li><a href="#hero"><GoArrowUpRight className="link-icon" /> Home</a></li>
-            <li><a href="#about"><GoArrowUpRight className="link-icon" /> About Us</a></li>
-            <li><a href="#schedules"><GoArrowUpRight className="link-icon" /> Our Products</a></li>
-            <li><a href="#blog"><GoArrowUpRight className="link-icon" /> News</a></li>
-            <li><a href="#contact"><GoArrowUpRight className="link-icon" /> Contact Us</a></li>
+            <li><a href="#"><GoArrowUpRight className="link-icon" /> Home</a></li>
+            <li><a href="#About"><GoArrowUpRight className="link-icon" /> About Us</a></li>
+            <li><a href="#products"><GoArrowUpRight className="link-icon" /> Our Products</a></li>
+            <li><a href="#news"><GoArrowUpRight className="link-icon" /> News</a></li>
+            <li><a href="#contact-section"><GoArrowUpRight className="link-icon" /> Contact Us</a></li>
           </ul>
         </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
             <li><IoIosCall className="contact-icon" /> +91-8760961525</li>
             <li><IoIosMail className="contact-icon" /> info@kickedge.com</li>
             <li><IoIosGlobe className="contact-icon" /> www.kickedge.com</li>
-            <li><IoIosPin className="contact-icon" /> Coimbatore, Tamil Nadu, India, Asia, World</li>
+            <li><IoIosPin className="contact-icon" /> Coimbatore, Tamil Nadu, India.</li>
           </ul>
         </div>
 

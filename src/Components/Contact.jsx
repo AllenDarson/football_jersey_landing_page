@@ -174,7 +174,7 @@ const Contact = () => {
                                 <FaMapMarkerAlt size={24} className="text-info me-3 mt-1" />
                                 <div>
                                     <h6 className="mb-0 fw-bold">Address</h6>
-                                    <p className="mb-0 text-white-50">Coimbatore, Tamil Nadu, India, Asia, World</p>
+                                    <p className="mb-0 text-white-50">Coimbatore, Tamil Nadu, India.</p>
                                 </div>
                             </div>
 

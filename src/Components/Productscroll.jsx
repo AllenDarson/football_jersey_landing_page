@@ -74,7 +74,7 @@ const ShopCarousel = () => {
   const isPrevDisabled = startIndex === 0;
 
   return (
-    <div className="carousel-page-container">
+    <div className="carousel-page-container"id="products">
       <header className="carousel-header">
         <h1>Products For You</h1>
         <div className="header-controls">

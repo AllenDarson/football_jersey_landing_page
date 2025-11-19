@@ -34,7 +34,7 @@ const KickEdgeLatestNews = () => {
 
     return (
         // **Set the background and text color for the entire section**
-        <section className="py-5 bg-black text-white">
+        <section className="py-5 bg-black text-white"id="news">
             <div className="container"data-aos="zoom-in-up">
                 {/* Title Section */}
                 <div className="text-center mb-5">
