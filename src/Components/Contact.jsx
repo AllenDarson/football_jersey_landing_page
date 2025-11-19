@@ -3,11 +3,8 @@ import "../assets/Css/Contact.css";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
 import { IoIosFootball } from "react-icons/io";
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-// Ensure you have installed 'react-icons' and 'react-bootstrap'
 
 // Define the custom button color
 const buttonColor = 'rgb(13, 202, 240)';
@@ -17,10 +14,7 @@ const Contact = () => {
         e.preventDefault();
         alert("Thanks for reaching out to KickEdge! We’ll respond as soon as possible.");
     };
-     useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
-
+  
     return (
         // 'contact-section' will be styled with the background image and overlay in styles.css
         <section id="contact-section" className="py-5">
@@ -28,9 +22,9 @@ const Contact = () => {
                 {/* Header Section */}
                 <div className="text-center text-md-start mb-5">
                     {/* text-info is styled in CSS to be the blue color */}
-                    <p className="text-info mb-1"data-aos="fade-down"><IoIosFootball /> Contact us</p>
-                    <h2 className="display-4 fw-bold"data-aos="fade-down">Connect With KickEdge</h2>
-                    <p className="w-75 lead"data-aos="fade-down" style={{ fontSize: '0.9rem', color: '#ccc' }}>
+                    <p className="text-info mb-1"><IoIosFootball /> Contact us</p>
+                    <h2 className="display-4 fw-bold">Connect With KickEdge</h2>
+                    <p className="w-75 lead" style={{ fontSize: '0.9rem', color: '#ccc' }}>
                         Have a question about our jerseys, sizes, or custom orders? Our team is here to help you with anything you need.
                     </p>
                 </div>
@@ -39,7 +33,7 @@ const Contact = () => {
                 <Row className="justify-content-center">
 
                     {/* 1. Contact Form (Left Side) */}
-                    <Col lg={6} className="mb-4 mb-lg-0"data-aos="fade-right">
+                    <Col lg={6} className="mb-4 mb-lg-0">
                         {/* The contact-form-box class can be added here if you want a subtle background, but the form background is handled by input styles. */}
                         <div className="p-4 contact-form-box">
                             <Form onSubmit={handleSubmit}>

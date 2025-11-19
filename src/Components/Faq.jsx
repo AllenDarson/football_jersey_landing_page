@@ -17,7 +17,7 @@ function Faq() {
     <section className="py-5" style={{ backgroundColor: '#101418', color: 'white' }}>
       <Container>
         {/* Row 1: Main Header */}
-        <Row className="justify-content-center text-center mb-5"data-aos="fade-down">
+        <Row className="justify-content-center text-center mb-5">
           <Col lg={8} xl={7}>
             {/* The 'text-muted' class can be styled to a specific color if needed, but we keep it default Bootstrap for simplicity */}
             
@@ -33,7 +33,7 @@ function Faq() {
           
           {/* Left Column: CTA */}
           <Col md={5} className="mb-5 mb-md-0"data-aos="fade-right">
-            <span className="text-light">Lorem ipsum dolor</span>
+            {/* <span className="text-light">Lorem ipsum dolor</span> */}
             <h2 className="pb-4 fw-bold">Have Any Questions?</h2>
             <p style={{ color: '#ccc' }}>
              Explore our most frequently asked questions to learn about product details, shipping, returns, and custom orders.

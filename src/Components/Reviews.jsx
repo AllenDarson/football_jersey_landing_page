@@ -89,7 +89,7 @@ const Reviews = () => {
         // Apply custom class to set background/text colors
         <div className="jersey-reviews-section container-fluid py-5">
             {/* Bootstrap Row to hold the two main columns */}
-            <div className="row justify-content-center">
+            <div className="row justify-content-center"data-aos="fade-right">
                 
                 {/* LEFT COLUMN: Review Summary & Form 
                     col-lg-5 for larger screens, col-12 for smaller

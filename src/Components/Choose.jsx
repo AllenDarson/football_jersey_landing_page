@@ -42,11 +42,11 @@ const Choose = [
 // Reusable component for each feature block
 const FeatureBlock = ({ icon: Icon, color, title, text, alignment }) => (
   // The alignment class controls where the text/icon float is positioned
-  <div className={`feature-block text-${alignment}`}>
+  <div className={`feature-block text-${alignment}`}data-aos="fade-up">
     <div className={`icon-circle align-${alignment}`} style={{ backgroundColor: color }}>
       <Icon size={30} color="white" />
     </div>
-    <div className={`content-box text-${alignment}`}>
+    <div className={`content-box text-${alignment}`}data-aos="fade-up">
       <h3 className="feature-title">{title}</h3>
       <p className="feature-text">{text}</p>
     </div>
