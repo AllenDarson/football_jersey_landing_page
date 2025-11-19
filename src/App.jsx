@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -12,11 +12,23 @@ import Faq from './Components/Faq'
 import Choose from './Components/Choose'
 import Reviews from './Components/Reviews'
 import News from './Components/News'
+
+import React, { useEffect, useState } from "react";
+// import Loaders from "./Components/Loaders";
 function App() {
   const [count, setCount] = useState(0)
+ // Loading code
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 2000);
+  // }, []);
 
   return (
     <>
+     {/* {loading ? (
+        <Loaders />
+      ) : ( */}
       <div>
         <Base />
         <About />
@@ -30,7 +42,7 @@ function App() {
         <Footer />
         
       </div>
-      
+      {/* )} */}
     </>
   )
 }

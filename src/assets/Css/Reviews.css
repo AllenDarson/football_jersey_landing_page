@@ -1,17 +1,26 @@
 /* JerseyReviews.css */
 
 .jersey-reviews-section {
-    /* Enforce black background and white text for the whole section */
-    background-color: #000000 !important;
-    color: #ffffff !important;
+ /* Enforce black background and white text for the whole section */
+ background-color: #000000 !important;
+ color: #ffffff !important;
+    
+    /* FIX: Prevents horizontal overflow, which causes the blank gap on mobile */
+    overflow-x: hidden;
 }
 
 /* Ensure progress bars look dark/black in the empty space */
 .progress {
-    background-color: #333333 !important;
+ background-color: #333333 !important;
 }
+
+/* Button hover state styling */
 .btn:hover {
-    color: var(--bs-btn-hover-color);
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-hover-border-color);
+/* Inherit or define specific hover styles if needed */
+ color: var(--bs-btn-hover-color, #212529); /* Default Bootstrap dark text color */
+ background-color: var(--bs-btn-hover-bg, #ffc107); /* Yellow/Warning color */
+ border-color: var(--bs-btn-hover-border-color, #ffc107);
 }
+
+/* Media Query is not strictly necessary as Bootstrap classes handle responsiveness well, 
+   but it can be added here for specific custom breakpoints if required later. */

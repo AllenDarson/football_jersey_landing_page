@@ -1,17 +1,14 @@
 import { Container, Row, Col, Button, Accordion } from 'react-bootstrap';
 import { FaQuestionCircle } from 'react-icons/fa'; // Assuming you use react-icons
 import "../assets/Css/Faq.css";
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+
 
 // Define the custom button color for consistency
 const buttonColor = 'rgb(13, 202, 240)'; 
 
 function Faq() {
-   useEffect(() => {
-      AOS.init({ duration: 1200 });
-    }, []);
+   
   return (
     // Set background color to black and text color to white
     <section className="py-5" style={{ backgroundColor: '#101418', color: 'white' }}>
@@ -32,7 +29,7 @@ function Faq() {
         <Row className="justify-content-center">
           
           {/* Left Column: CTA */}
-          <Col md={5} className="mb-5 mb-md-0"data-aos="fade-right">
+          <Col md={5} className="mb-5 mb-md-0">
             {/* <span className="text-light">Lorem ipsum dolor</span> */}
             <h2 className="pb-4 fw-bold">Have Any Questions?</h2>
             <p style={{ color: '#ccc' }}>
@@ -72,7 +69,7 @@ function Faq() {
           </Col>
 
           {/* Right Column: Accordion */}
-          <Col md={7}data-aos="fade-left">
+          <Col md={7}>
             {/* Using the official React Bootstrap Accordion Component */}
             <Accordion defaultActiveKey="0">
               
