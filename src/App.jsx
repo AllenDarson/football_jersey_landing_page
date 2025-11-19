@@ -14,21 +14,21 @@ import Reviews from './Components/Reviews'
 import News from './Components/News'
 
 import React, { useEffect, useState } from "react";
-// import Loaders from "./Components/Loaders";
+import Loaders from "./Components/Loaders";
 function App() {
   const [count, setCount] = useState(0)
  // Loading code
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => setLoading(false), 2000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
 
   return (
     <>
-     {/* {loading ? (
+     {loading ? (
         <Loaders />
-      ) : ( */}
+      ) : (
       <div>
         <Base />
         <About />
@@ -42,7 +42,7 @@ function App() {
         <Footer />
         
       </div>
-      {/* )} */}
+       )} 
     </>
   )
 }

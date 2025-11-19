@@ -1,25 +1,23 @@
-// import React from "react";
-// import "../assets/Css/Loaders.css";
+import React from "react";
+import "../assets/Css/Loaders.css";
 
 
-// function Loader() {
-//   return (
-//     <div className="loader-wrapper">
-//       <div class="container">
-//         <div class="ball">
-//           <div class="inner">
-//             <div class="line"></div>
-//             <div class="line line--two"></div>
-//             <div class="oval"></div>
-//             <div class="oval oval--two"></div>
-//           </div>
-//         </div>
-//         <div class="shadow"></div>
-//       </div>
+function Loader() {
+  return (
+   <div class="kickedge-loader-container">
+    <div class="kickedge-ball-wrapper">
+        <div class="kickedge-ball">
+            <div class="kickedge-ball-inner">
+                <div class="kickedge-line"></div>
+                <div class="kickedge-line kickedge-line--two"></div>
+                <div class="kickedge-oval"></div>
+                <div class="kickedge-oval kickedge-oval--two"></div>
+            </div>
+        </div>
+        <div class="kickedge-shadow"></div>
+    </div>
+</div>
+  );
+}
 
-//       <h2 className="loader-title">KickEdge</h2>
-//     </div>
-//   );
-// }
-
-// export default Loader;
+export default Loader;

@@ -1,0 +1,197 @@
+/* Container to center the loader and set the background */
+.kickedge-loader-container {
+    background-color: black;
+    /* Use 100vh/100vw to cover the entire viewport */
+    height: 100vh;
+    width: 100vw;
+    position: fixed; /* Ensures it covers everything */
+    top: 0;
+    left: 0;
+    /* Flexbox for perfect centering (mobile, tablet, desktop) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* High Z-index to be on top of other content */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Wrapper for the ball and shadow (only needed if you center the whole block, but we center the container itself) */
+.kickedge-ball-wrapper {
+    /* We don't need many styles here, just for grouping */
+    /* You can add a max-width for very small screens if needed, but flex takes care of it */
+}
+
+/* --- Keyframes (Animations) --- */
+
+@keyframes kickedgeRotateBall {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateY(720deg) rotateX(720deg) rotateZ(360deg);
+    }
+}
+
+@keyframes kickedgeBounceBall {
+    0% {
+        transform: translateY(-70px) scale(1, 1);
+    }
+    15% {
+        transform: translateY(-56px) scale(1, 1);
+    }
+    45% {
+        transform: translateY(70px) scale(1, 1);
+    }
+    50% {
+        transform: translateY(73.5px) scale(1, 0.92); /* Squish on impact */
+    }
+    55% {
+        transform: translateY(70px) scale(1, 0.95);
+    }
+    85% {
+        transform: translateY(-56px) scale(1, 1);
+    }
+    95% {
+        transform: translateY(-70px) scale(1, 1);
+    }
+    100% {
+        transform: translateY(-70px) scale(1, 1);
+    }
+}
+
+@keyframes kickedgeBounceShadow {
+    0% {
+        filter: blur(3px);
+        opacity: 0.6;
+        transform: translateY(73px) scale(0.5, 0.5);
+    }
+    45% {
+        filter: blur(1px);
+        opacity: 0.9;
+        transform: translateY(73px) scale(1, 1);
+    }
+    55% {
+        filter: blur(1px);
+        opacity: 0.9;
+        transform: translateY(73px) scale(1, 1);
+    }
+    100% {
+        filter: blur(3px);
+        opacity: 0.6;
+        transform: translateY(73px) scale(0.5, 0.5);
+    }
+}
+
+/* --- Ball Styling --- */
+
+.kickedge-ball {
+    animation-name: kickedgeBounceBall;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    border-radius: 50%;
+    height: 60px;
+    position: relative;
+    transform: translateY(-70px);
+    transform-style: preserve-3d;
+    width: 60px;
+    z-index: 1;
+}
+
+/* Base Ball Color: White */
+.kickedge-ball::before {
+    /* Changed gradient to white/light grey for a shiny football look */
+    background: radial-gradient(circle at 36px 20px, #ffffff, #cccccc);
+    border: 2px solid #333333; /* Dark border for the seams/structure */
+    border-radius: 50%;
+    content: "";
+    height: calc(100% + 6px);
+    left: -6px;
+    position: absolute;
+    top: -3px;
+    transform: translateZ(1vmin);
+    width: calc(100% + 6px);
+}
+
+.kickedge-ball .kickedge-ball-inner {
+    animation-name: kickedgeRotateBall;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+/* Line and Oval Styling (Seams/Patches) - These remain dark/black */
+
+.kickedge-ball .kickedge-line::before,
+.kickedge-ball .kickedge-line::after {
+    border: 2px solid #333333; /* Dark seams/lines */
+    border-radius: 50%;
+    content: "";
+    height: 99%;
+    position: absolute;
+    width: 99%;
+}
+
+.kickedge-ball .kickedge-line::before {
+    transform: rotate3d(0, 0, 0, 0);
+}
+
+.kickedge-ball .kickedge-line::after {
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.kickedge-ball .kickedge-line--two::before {
+    transform: rotate3d(0, 0, 0, 2deg);
+}
+
+.kickedge-ball .kickedge-line--two::after {
+    transform: rotate3d(1, 0, 0, 88deg);
+}
+
+.kickedge-ball .kickedge-oval::before,
+.kickedge-ball .kickedge-oval::after {
+    border-top: 4px solid #333333; /* Darker border for the 'patch' ovals */
+    border-radius: 50%;
+    content: "";
+    height: 99%;
+    position: absolute;
+    width: 99%;
+}
+
+.kickedge-ball .kickedge-oval::before {
+    transform: rotate3d(1, 0, 0, 45deg) translate3d(0, 0, 6px);
+}
+.kickedge-ball .kickedge-oval::after {
+    transform: rotate3d(1, 0, 0, -45deg) translate3d(0, 0, -6px);
+}
+
+.kickedge-ball .kickedge-oval--two::before {
+    transform: rotate3d(1, 0, 0, 135deg) translate3d(0, 0, -6px);
+}
+
+.kickedge-ball .kickedge-oval--two::after {
+    transform: rotate3d(1, 0, 0, -135deg) translate3d(0, 0, 6px);
+}
+
+/* --- Shadow Styling --- */
+
+.kickedge-shadow {
+    animation-name: kickedgeBounceShadow;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    background: #555555; /* Changed shadow color to dark grey since the floor is implicitly black */
+    filter: blur(2px);
+    border-radius: 50%;
+    height: 6px;
+    transform: translateY(73px);
+    width: 54px;
+}
