@@ -75,7 +75,7 @@ function Base() {
             {/* Center Logo (Desktop Only) - Hidden on mobile/tablet */}
             <a className="navbar-brand fw-bold fs-3 d-none d-lg-flex align-items-center logo-center" href="#">
               <img
-                src="public/soccer-player (1).png"
+                src="/soccer-player (1).png"
                 alt="KickEdge Logo"
                 style={{ width: "40px", height: "40px" }}
               />
