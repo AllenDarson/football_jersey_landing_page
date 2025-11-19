@@ -16,19 +16,19 @@ const KickEdgeLatestNews = () => {
             title: 'MESSI’S LEGACY: THE INTER MIAMI HOME JERSEY',
             date: 'Nov 7, 2025',
             summary: 'The latest Home kit draws its inspiration from the historic 2020 debut jersey, quickly becoming a symbol. Reintroduced in 2024, the design returned as a defining...',
-            imageSrc: '/public/Messi news.jpg' 
+            imageSrc: '/Messi news.jpg' 
         },
         {
             title: 'KickEdge Opens First Exclusive Store in Coimbatore',
             date: 'Nov 6, 2025',
             summary: 'We are excited to welcome fans to our newest boutique in Coimbatore, Tamil Nadu. Drop by to discover special merchandise and fresh arrivals from the KickEdge lineup.',
-            imageSrc: 'public/news 2.jpg' // Placeholder for your store image
+            imageSrc: '/news 2.jpg' // Placeholder for your store image
         },
         {
             title: 'KickEdge Unveils Eco-Friendly Liga Retro Jersey Upgrade',
             date: 'Nov 4, 2025',
             summary: 'Our classic Liga collection gets a sustainable makeover with recycled polyester and bold new 38mm fabric details. A timeless design reimagined with modern materials.',
-            imageSrc: 'public/News 3.png' // Placeholder for your close-up jersey texture
+            imageSrc: '/News 3.png' // Placeholder for your close-up jersey texture
         }
     ];
 

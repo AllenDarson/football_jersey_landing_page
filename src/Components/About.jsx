@@ -19,7 +19,7 @@ const AboutSection = () => {
                     <Col md={6} className="image-col">
                         <div className="image-container">
                             {/* Use the placeholder variable for the image source */}
-                            <Image src="public\about.jpg" alt="Football coach training players" fluid className="rounded-4" />
+                            <Image src="\about.jpg" alt="Football coach training players" fluid className="rounded-4" />
                             {/* The "Since 2010" vertical text overlay - uses cyan accent color */}
                             <div className="since-text">
                                 <span className="small">Since</span>

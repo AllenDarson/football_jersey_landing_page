@@ -1,7 +1,7 @@
 /* --- Background Image & Overlay Styles --- */
 #contact-section {
   /* IMPORTANT: Change this path to your image location! */
-  background-image: url('./public/contact banner.jpg'); 
+  background-image: url('/contact banner.jpg'); 
   
   background-size: cover;       
   background-position: center;  

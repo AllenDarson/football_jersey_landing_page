@@ -179,7 +179,7 @@ function Base() {
           <Carousel.Item>
             <img
               className="d-block w-100 hero-img"
-              src="public/carosel 2.jpg"
+              src="/carosel 2.jpg"
             />
 
             <div className="hero-caption">
@@ -197,7 +197,7 @@ function Base() {
           <Carousel.Item>
             <img
               className="d-block w-100 hero-img"
-              src="public/carosel 3.jpg"
+              src="/carosel 3.jpg"
             />
 
             <div className="hero-caption">

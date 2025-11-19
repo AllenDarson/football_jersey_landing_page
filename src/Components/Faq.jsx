@@ -35,7 +35,7 @@ function Faq() {
             <p style={{ color: '#ccc' }}>
              Explore our most frequently asked questions to learn about product details, shipping, returns, and custom orders.
             </p>
-           <button className="button mt-3" style={{ "--clr": "rgb(13, 202, 240)" }} href="#">
+           <button className="button mt-3" style={{ "--clr": "rgb(13, 202, 240)" }} href="#contact-section">
   <span className="button__icon-wrapper">
     {/* Primary SVG Icon */}
     <svg

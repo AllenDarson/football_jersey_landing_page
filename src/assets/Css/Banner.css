@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0.2) 0%, /* Slight overlay on the left */
       rgba(0, 0, 0, 0.6) 100% /* Stronger overlay on the right for text contrast */
     ),
-    url('./public/banner.jpg'); /* REPLACE WITH YOUR IMAGE PATH */
+    url('/banner.jpg'); /* REPLACE WITH YOUR IMAGE PATH */
     
   background-size: cover;
   background-position: center;

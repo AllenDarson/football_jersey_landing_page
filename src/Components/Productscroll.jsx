@@ -3,16 +3,16 @@ import React, { useState, useEffect } from 'react';
 
 // Mock data including the image file paths (assuming images are in the public folder)
 const mockProducts = [
-  { id: 1, name: 'Germany 26 Home Authentic Jersey', price: '9 599.00', details: "Men • Football", imageSrc: '/public/jersey 1.avif' },
-  { id: 2, name: 'Spain 26 Home Authentic Jersey', price: '9 599.00', details: "Men • Football", imageSrc: '/public/jerset 2.avif' },
-  { id: 3, name: 'Germany 26 Home Jersey', price: '6 599.00', details: "Women • Football", imageSrc: '/public/jerseey 3.avif' },
-  { id: 4, name: 'Italy 26 Home Kids Jersey', price: '4 299.00', details: "Kids Unisex • Football", imageSrc: '/public/jersey 4.avif' },
-  { id: 5, name: 'Manchester United 24/25 Away Jersey', price: '3 599.50', details: "Men • Football", imageSrc: '/public/jersey 5.avif' },
-  { id: 6, name: 'Brazil 2024 Stadium Home', price: '4 695.00', details: "Men's Nike Dri-FIT Football Replica Shirt", imageSrc: '/public/jersey.avif' },
-  { id: 7, name: 'Paris Saint-Germain 2024/25 Stadium Home', price: '4 695.00', details: "Men's Nike Dri-FIT Football Replica Shirt", imageSrc: '/public/jersey 7.avif' },
-  { id: 8, name: 'F.C. Barcelona 2025/26 Stadium Home', price: '3 995.00', details: "Older Kids' Nike Dri-FIT Football Replica Shirt", imageSrc: '/public/jersey 8.avif' },
-  { id: 9, name: 'Paris Saint-Germain 2025/26 Stadium Third', price: '4 695.00', details: "Women's Nike Dri-FIT Total 90 Football Replica Shirt", imageSrc: '/public/jersey 9.avif' },
-  { id: 10, name: 'Chelsea F.C. 2025/26 Stadium Home', price: '4 695.00', details: "Women's Nike Dri-FIT Football Replica Shirt", imageSrc: '/public/jersey 10.avif' },
+  { id: 1, name: 'Germany 26 Home Authentic Jersey', price: '9 599.00', details: "Men • Football", imageSrc: '/jersey 1.avif' },
+  { id: 2, name: 'Spain 26 Home Authentic Jersey', price: '9 599.00', details: "Men • Football", imageSrc: '/jerset 2.avif' },
+  { id: 3, name: 'Germany 26 Home Jersey', price: '6 599.00', details: "Women • Football", imageSrc: '/jerseey 3.avif' },
+  { id: 4, name: 'Italy 26 Home Kids Jersey', price: '4 299.00', details: "Kids Unisex • Football", imageSrc: '/jersey 4.avif' },
+  { id: 5, name: 'Manchester United 24/25 Away Jersey', price: '3 599.50', details: "Men • Football", imageSrc: '/jersey 5.avif' },
+  { id: 6, name: 'Brazil 2024 Stadium Home', price: '4 695.00', details: "Men's Nike Dri-FIT Football Replica Shirt", imageSrc: '/jersey.avif' },
+  { id: 7, name: 'Paris Saint-Germain 2024/25 Stadium Home', price: '4 695.00', details: "Men's Nike Dri-FIT Football Replica Shirt", imageSrc: '/jersey 7.avif' },
+  { id: 8, name: 'F.C. Barcelona 2025/26 Stadium Home', price: '3 995.00', details: "Older Kids' Nike Dri-FIT Football Replica Shirt", imageSrc: '/jersey 8.avif' },
+  { id: 9, name: 'Paris Saint-Germain 2025/26 Stadium Third', price: '4 695.00', details: "Women's Nike Dri-FIT Total 90 Football Replica Shirt", imageSrc: '/jersey 9.avif' },
+  { id: 10, name: 'Chelsea F.C. 2025/26 Stadium Home', price: '4 695.00', details: "Women's Nike Dri-FIT Football Replica Shirt", imageSrc: '/jersey 10.avif' },
 ];
 
 const ShopCarousel = () => {
