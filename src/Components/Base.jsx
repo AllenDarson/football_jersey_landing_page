@@ -38,7 +38,7 @@ function Base() {
             {/* 2. Mobile Logo (Center) - Pushed to the center using mx-auto */}
             <a className="navbar-brand fw-bold fs-3 d-flex align-items-center logo-center mx-auto" href="#">
               <img
-                src="public/soccer-player (1).png"
+                src="/soccer-player (1).png"
                 alt="KickEdge Logo"
                 style={{ width: "40px", height: "40px" }}
               />
