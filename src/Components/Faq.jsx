@@ -69,7 +69,7 @@ function Faq() {
           </Col>
 
           {/* Right Column: Accordion */}
-          <Col md={7}>
+          <Col md={7}data-aos="flip-right">
             {/* Using the official React Bootstrap Accordion Component */}
             <Accordion defaultActiveKey="0">
               

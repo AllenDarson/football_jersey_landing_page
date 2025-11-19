@@ -93,7 +93,7 @@ const Reviews = () => {
                 
                 {/* LEFT COLUMN: Review Summary & Form */}
                 {/* col-lg-5 (Desktop), col-md-6 (Tablet), col-12 (Mobile) */}
-                <div className="col-lg-5 col-md-6 col-12 px-4 mb-5 mb-md-0">
+                <div className="col-lg-5 col-md-6 col-12 px-4 mb-5 mb-md-0"data-aos="zoom-in">
                     
                     {/* Customer Reviews Header */}
                     <h2 className="text-white mb-3">
@@ -118,7 +118,7 @@ const Reviews = () => {
                     </div>
                     
                     {/* Share Your Thoughts / Write a Review Button */}
-                    <div className="pt-3 border-top border-secondary">
+                    <div className="pt-3 border-top border-secondary"data-aos="flip-right">
                         <h3 className="text-white h5">Share your thoughts</h3>
                         <p className="text-secondary small mb-3">
                             Got your new kit? Tell us what you think! Your feedback helps us score big.
