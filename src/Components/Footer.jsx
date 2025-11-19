@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Logo - As requested */}
           <a className="footer-logo-link" href="#">
             <img
-              src="public\soccer-player (1).png"
+              src="\soccer-player (1).png"
               alt="KickEdge Logo"
               className="footer-logo-img"
             />
